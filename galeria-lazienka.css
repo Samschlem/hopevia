@@ -1,0 +1,302 @@
+:root{
+    --bordo:rgb(53, 7, 7);
+    --lightbordo:rgb(78, 4, 4);
+    --yellow:rgba(241, 195, 67, 0.9);
+    --cream:rgba(255, 229, 158, 0.699);
+    --lightcream:rgb(253, 236, 188);
+    --whitebrick:rgba(241, 241, 241,0.3);
+    --brown:rgba(26, 18, 2, 0.9);
+    --lightbrown:rgba(49, 8, 8, 0.9)
+}
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    color:var(--cream);
+    box-sizing: border-box;
+    font-family: 'Russo One';
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth; 
+}
+
+body{
+    background:  linear-gradient(to right top,#1b0c02ee,black);
+    display: flex;
+}
+
+/* HEADER */
+header{
+    color:var(--cream);
+    height:100px;
+    padding: 10px 50px;
+    width:100%;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("woodenwall.jpg");
+    z-index:1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header span:hover{
+    color: var(--lightcream);
+    transition: 0.5s ease;
+}
+
+.section__title{
+    font-size:2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.nav_logo{
+    color: var(--cream);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding:15px
+}
+
+.nav__icon{
+    font-size:1.5rem;
+}
+
+.nav__link{
+    display:flex;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+i.nav__icon{
+    display:none;
+}
+
+@media screen and (max-width : 768px){
+    .nav__menu{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        background-color: var(--cream);
+        width: 100%;
+        height: 4.5rem;
+        padding: 0 1rem;
+        align-content:center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+        box-shadow: 0 -1px 12px rgba(59, 59, 59, 0.25);
+    }
+
+    i.nav__icon{
+        display:block;
+        margin-top: 0.7rem;
+        color: var(--brown);
+    }
+
+    .section__title{
+        font-size:1.5rem;
+    }
+
+    .nav__name {
+        font-weight:600;
+        color:var(--brown);
+        text-shadow: 0;
+    }
+    
+    .nav__link{
+        flex-direction: column;
+        align-items:center;
+        color:#454343;
+    }
+}
+
+
+#home{
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(photos/lazienkipattern2.jpg) no-repeat top center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15rem 2rem;
+    padding-top: 18rem;
+}
+
+#home article h1{
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+#home article h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--lightcream);
+    line-height: 1em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#home article h2 span{
+    color: var(--lightcream);
+    font-size: 1.85rem;
+}
+
+#home article p{
+    font-size: 0.8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+#gallery{
+    width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.frame {
+    min-width: 33%;
+    position: relative;
+    overflow: hidden;
+    flex: 1;
+    height: 400px; 
+    cursor: pointer;
+  }
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    transition: transform 0.3s ease-in-out;
+}
+
+.frame:hover img {
+    transform: scale(1.2);
+}
+
+.popup {
+    position:fixed;
+    align-content: center;
+    animation: fadeIn 1s;
+    background: var(--brown);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100vh;
+    top:0;
+    width: 100%;
+}
+
+.popup.hidden {
+    display: none;
+}
+
+.popup.fade-out {
+    animation: fadeOut 0.3s both;
+}
+
+.popup__img {
+    max-height: 100%;
+    max-width: 60%;
+}
+
+.popup__close {
+    background-color: transparent;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 128px;
+    position: fixed;
+    right: 5%;
+    top: 10%;
+}
+
+.popup__arrow {
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 128px;
+    height: 128px;
+    line-height: 128px;
+    position: absolute;
+    top: 50%;
+    width: 128px;
+    color:var(--brown);
+}
+
+.popup__close,
+.popup__arrow {
+    opacity: 0.5;
+    transition: opacity 0.3s;
+}
+
+.popup__close:hover,
+.popup__arrow:hover {
+    opacity: 1;
+}
+
+.popup__arrow--left {
+    left: 5%;
+}
+
+.popup__arrow--right {
+    right: 5%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .frame{
+        flex: 1 0 100%;
+    }
+
+    .popup__close {
+    top: 15%;
+    font-size: 80px;
+    }
+
+    .popup__arrow {
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        font-size: 70px;
+        height: 70px;
+        width: 70px;
+        line-height: 70px;
+        position: absolute;
+        top: 50%;
+        color:var(--brown);
+    }
+}
+
+@media screen and (min-width: 1800px) {
+   #home article{
+    padding-left: 5%;
+   }
+}

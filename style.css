@@ -1,0 +1,377 @@
+:root{
+    --bordo:rgb(53, 7, 7);
+    --lightbordo:rgb(78, 4, 4);
+    --yellow:rgba(241, 195, 67, 0.9);
+    --cream:rgba(255, 229, 158, 0.699);
+    --lightcream:rgb(253, 236, 188);
+    --whitebrick:rgba(241, 241, 241,0.3);
+    --brown:rgba(49, 36, 8, 0.9);
+    --lightbrown:rgba(49, 8, 8, 0.9)
+}
+
+*{
+    margin:0;
+    padding:0;
+    text-decoration: none;
+    color:var(--cream);
+    box-sizing: border-box;
+    font-family: 'Russo One';
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth; 
+}
+
+body{
+    background:  linear-gradient(to right top,#1b0c02ee,black);
+    display: flex;
+}
+
+/* HEADER */
+header{
+    color:var(--cream);
+    height:100px;
+    padding: 10px 50px;
+    width:100%;
+    position:fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url("woodenwall.jpg");
+    z-index:1000;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+}
+
+header span:hover{
+    color: var(--lightcream);
+    transition: 0.5s ease;
+}
+
+.section__title{
+    font-size:2.5rem;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.nav_logo{
+    color: var(--cream);
+    font-weight: 700;
+    font-size: 1.5rem;
+    padding:15px
+}
+
+.nav__icon{
+    font-size:1.5rem;
+}
+
+.nav__link{
+    display:flex;
+}
+
+.nav__list{
+    display: flex;
+    justify-content: space-between;
+    column-gap: 2rem;
+}
+
+i.nav__icon{
+    display:none;
+}
+
+@media screen and (max-width : 768px){
+    .nav__menu{
+        position: fixed;
+        bottom:0;
+        left: 0;
+        background-color: var(--cream);
+        width: 100%;
+        height: 4.5rem;
+        padding: 0 1rem;
+        align-content:center;
+        border-radius: 1.25rem 1.25rem 0 0;
+        transition: .4s;
+        box-shadow: 0 -1px 12px rgba(59, 59, 59, 0.25);
+    }
+
+    i.nav__icon{
+        display:block;
+        margin-top: 0.7rem;
+        color: var(--brown);
+    }
+
+    .section__title{
+        font-size:1.5rem;
+    }
+
+    .nav__name {
+        font-weight:600;
+        color:var(--brown);
+        text-shadow: 0;
+    }
+    
+    .nav__link{
+        flex-direction: column;
+        align-items:center;
+        color:#454343;
+    }
+}
+
+
+/* SEKCJA HOME */
+#home{
+    width: 100%;
+    height:80vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(photos/salon1.jpg) no-repeat top center/cover;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 15rem 2rem;
+}
+
+#home article h1{
+    font-weight: normal;
+    font-size: 1rem;
+    color: var(--cream);
+    margin-bottom: 10px;
+}
+
+#home article h2{
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: var(--lightcream);
+    line-height: 1em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#home article h2 span{
+    color: var(--lightcream);
+    font-size: 1.85rem;
+}
+
+#home article p{
+    font-size: 0.8rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+
+/*DO SEKCJI*/
+section{
+    padding: 3% 0 5%;
+}
+
+.mini_container{
+    width: 85%;
+    padding: 2%;
+    border: 2px solid black;
+    margin: 0 auto;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url(photos/greenwallpeper2.avif) no-repeat top center/cover;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    text-align: center;
+}
+
+
+/* SEKCJA O FIRMIE */
+
+#about article{
+    padding-top: 20px;
+    text-align: justify;
+}
+#about article hr{
+    opacity: 0;
+}
+#about article p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin: 1.3rem 0px 1.1rem;
+}
+#about article a{
+    color: var(--brown);
+    background-color: var(--lightcream);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+}
+
+#about article a:hover{
+    background-color: var(--cream);
+    transition: 1s ease;
+}
+#about aside {
+    margin: 25px 0px 25px;
+}
+#about aside img{
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0px 5px 15px var(--lightcream);
+    filter: brightness(70%);
+}
+
+@media (min-width: 576px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    #about article{
+        padding: 0px;
+        text-align: left;
+        width:51%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    #about article p{
+        padding-right: 1rem;
+    }
+    #about aside,
+    #about article {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html{
+        font-size: 15px;
+    }
+    #about article h1{
+        font-size: 2.7rem;
+    }
+    #about article h2{
+        font-size: 1.8rem;
+    }
+    #about aside,
+    #about article {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1400px) {
+    html{
+        font-size: 17px;
+    }
+    #about aside,
+    #about article {
+        width: 47%;
+    }
+}
+
+
+/* SEKCJA REALIZACJE */
+#realizacje .mini_container{
+    width: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url(photos/white-bricks.jpg) no-repeat center center/cover;;
+}
+#realizacje article{
+    padding-top: 20px;
+    text-align: center;
+}
+#realizacje article h2{
+    color: var(--lightcream)
+}
+#realizacje article p{
+    font-size: 0.85rem;
+    text-align: justify;
+    margin: 1.3rem 0px 1.1rem;
+}
+#realizacje article a{
+    color: var(--brown);
+    background-color: var(--lightcream);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    width: fit-content;
+}
+#realizacje article hr{
+    opacity: 0;
+}
+
+#realizacje article a:hover{
+    background-color: var(--cream);
+    transition: 1s ease;
+}
+#realizacje aside {
+    margin: 25px 0px 25px;
+}
+#realizacje aside img{
+    max-width: 100%;
+    height: auto;
+    opacity: 0.8;
+    box-shadow: 0px 30px 20px rgba(0, 0, 0, 0.4);
+    filter: brightness(70%);
+}
+
+@media (min-width: 576px) {
+    html{
+        font-size: 13px;
+    }
+}
+
+@media (min-width: 768px) {
+    html{
+        font-size: 14px;
+    }
+    #realizacje article{
+        padding: 0px;
+        text-align: left;
+        width:51%;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+    #realizacje article p{
+        padding-right: 1rem;
+    }
+    #realizacje aside,
+    #realizacje article {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1200px) {
+    html{
+        font-size: 15px;
+    }
+    #realizacje article h1{
+        font-size: 2.7rem;
+    }
+    #realizacje article h2{
+        font-size: 1.8rem;
+    }
+    #realizacje aside,
+    #realizacje article {
+        width: 47%;
+    }
+}
+
+@media (min-width: 1400px) {
+    html{
+        font-size: 17px;
+    }
+    #realizacje aside,
+    #realizacje article {
+        width: 47%;
+    }
+}
+
+/* SEKCJA KONTAKT */
+
+.contact_container{
+    position: relative;
+    text-align: center;
+    height: 50vh;
+    margin-top: 5%;
+    background-image: url('woodenwall.jpg');
+    box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.4); 
+}
