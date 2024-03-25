@@ -1,123 +1,331 @@
 <!DOCTYPE html>
-<html lang="pl-PL">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" href="" type="image">
-        <title>Jakubowski - remont dla kazdego</title>
-        <link rel="stylesheet" href="style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GT Web Design</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="glider.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="mobile-nav">
+        <ul class="menu-items">
+          <li>
+            <a href="#about">About</a>
+          </li>
 
+          <li>
+            <a href="#projects">Our Projects</a>
+          </li>
 
-    <body>
-        <header class="header">               
-            <div>
-                <a href="#home" class="nav_logo">JAKUBOWSKI</a> 
+          <li>
+            <a href="#testimonials">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+
+      <nav class="desktop-nav">
+        <div class="logo">
+          <a href="#">
+            <img src="images/Logo.svg" alt="" />
+          </a>
+        </div>
+
+        <div class="menu-icon">
+          <img src="images/MenuIcon.svg" alt="" />
+        </div>
+
+        <ul class="menu-items">
+          <li>
+            <a href="#about" class="active">About</a>
+          </li>
+
+          <li>
+            <a href="#projects">Our Projects</a>
+          </li>
+
+          <li>
+            <a href="#testimonials">Testimonials</a>
+          </li>
+
+          <li>
+            <a href="#contact">Contact</a>
+          </li>
+
+          <li>
+            <a href="#contact" class="btn">Get Started</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- End of Desktop Navigation -->
+
+      <header class="hero-container">
+        <div class="left">
+          <p>Welcome To</p>
+          <h1><span class="gt">GT</span> Web Design</h1>
+          <a href="#" class="btn">Get Started</a>
+          <a href="#" class="btn cyan">Learn More</a>
+        </div>
+
+        <div class="right">
+          <img src="images/HeroImage.svg" alt="" />
+        </div>
+
+        <img class="hero-bg" src="images/HeroBG.svg" alt="" />
+
+        <div class="polygon-container">
+          <img class="polygon" src="images/Polygon.svg" alt="" />
+          <img class="polygon2" src="images/Polygon2.svg" alt="" />
+          <img class="polygon3" src="images/Polygon3.svg" alt="" />
+        </div>
+      </header>
+
+      <!-- End of Hero Section -->
+
+      <div class="brands-section">
+        <h2>Our Clients</h2>
+
+        <div class="brands-container">
+          <div class="brands-line-1">
+            <img src="images/MicrosoftLogo.png" alt="" />
+            <img src="images/GoogleLogo.png" alt="" />
+            <img src="images/NetflixLogo.png" alt="" />
+          </div>
+
+          <div class="brands-line-2">
+            <img src="images/UnityLogo.png" alt="" />
+            <img src="images/AmazonLogo.png" alt="" />
+          </div>
+        </div>
+      </div>
+
+      <!-- End of Brands Section -->
+
+      <section id="about" class="about-section">
+        <h2>About Us</h2>
+        <div class="section-content">
+          <div class="about-description">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              malesuada pharetra ut feugiat quisque odio nulla leo. Facilisis
+              rhoncus gravida integer risus, ac vulputate a. Elementum fermentum
+              feugiat nunc cras ac orci, amet sapien. Ut quis est, pellentesque
+              in et ipsum.
+            </p>
+
+            <p>
+              Enim eget faucibus eget enim leo nisl lorem feugiat feugiat.
+              Pellentesque duis id vel tellus in nisi, enim tellus id. Sit
+              dignissim dictum sit integer tortor porttitor erat risus libero.
+              Netus pulvinar vivamus nec, nec morbi.
+            </p>
+          </div>
+
+          <img src="images/About.png" alt="" />
+        </div>
+      </section>
+
+      <!-- End of About Us Section -->
+
+      <section id="projects" class="project-section">
+        <h2>Our Projects</h2>
+
+        <div class="projects-gallery">
+          <img src="images/Project1.png" alt="" />
+          <img src="images/Project2.png" alt="" />
+          <img src="images/Project3.png" alt="" />
+          <img src="images/Project4.png" alt="" />
+          <img class="hide" src="images/Project5.png" alt="" />
+          <img class="hide" src="images/Project6.png" alt="" />
+        </div>
+
+        <a href="#" class="btn cyan">View All</a>
+      </section>
+
+      <!-- End of the Projects Section -->
+    </div>
+
+    <section id="testimonials" class="testimonials-section">
+      <div class="wrapper">
+        <h2>Testimonials</h2>
+
+        <div class="testimonials-container">
+          <div class="testimonials">
+            <div class="testimonial">
+              <div class="slide-container">
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    malesuada pharetra ut feugiat quisque odio nulla leo.
+                    Facilisis rhoncus gravida integer risus, ac vulputate a.
+                    Elementum fermentum feugiat nunc cras ac orci, amet sapien.
+                  </p>
+                  <div class="name">
+                    <strong>Darlene Richards,</strong> Amazon
+                  </div>
+                </div>
+
+                <img src="images/Testimonial1.png" alt="" />
+              </div>
             </div>
 
-            <div class="nav__menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="#home" class="nav__link">
-                            <i class="bx bx-home-alt nav__icon"></i>
-                            <span class="nav__name">START</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="bx bx-user nav__icon"></i>
-                            <span class="nav__name">O FIRMIE</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#realizacje" class="nav__link">
-                            <i class="bx bx-book-content nav__icon"></i>
-                            <span class="nav__name">REALIZACJE</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#about" class="nav__link">
-                            <i class="bx bx-book-content nav__icon"></i>
-                            <span class="nav__name">OFERTA</span>
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="#contact" class="nav__link">
-                            <i class="bx bx-message-square-dots nav__icon"></i>
-                            <span class="nav__name">KONTAKT</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>          
-        </header>
-
-
-        <main>
-
-            <section id = "home">
-                <article>
-                    <div class="main-text">
-                        <h1>FIRMA REMONTOWO-BUDOWLANA</h1>
-                        <h2>MARIUSZ JAKUBOWSKI<br>
-                        <span>Remont dla każdego</span></h2>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore fuga debitis distinctio doloribus quis adipisci asperiores soluta quidem nemo aperiam maiores tempora, accusamus minus odit magni corporis molestias dignissimos porro? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione assumenda recusandae earum totam fuga!</p>
-                    </div>
-                </article>
-            </section>
-
-            <section id="about">
-                <h2 class="section__title">O FIRMIE</h2>
-                <div class="mini_container">
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Excepturi exercitationem nobis quos rem illum explicabo aperiam perspiciatis odit aut? Quaerat nobis sequi minima cupiditate ex soluta quisquam eligendi eveniet saepe dolorem, tempora laudantium necessitatibus sapiente, fugiat nihil. Quod officia vel porro earum ad delectus, 
-                            harum eveniet ducimus doloremque eum quas.<br><br>adipisicing elit. Cupiditate deseru
-                            nt magni sint mollitia similique corporis quis voluptatibus, eos tempora ealias
-                            illo nemo excepturi blanditiis vitae impedit minus tempore praesentium harum.Quis, temporibus dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime minima quod eius aspernatur. Accusantium sed sunt corrupti sapiente deleniti?<br><hr>
-                        <a href="about.html">Czytaj wiecej...</a>
-                    </article>
-                    <aside><img src="photos/DSC_0683.JPG"></aside>
+            <div class="testimonial">
+              <div class="slide-container">
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    malesuada pharetra ut feugiat quisque odio nulla leo.
+                    Facilisis rhoncus gravida integer risus, ac vulputate a.
+                    Elementum fermentum feugiat nunc cras ac orci, amet sapien.
+                  </p>
+                  <div class="name">
+                    <strong>Peter Williams,</strong> Louis Vuitton
+                  </div>
                 </div>
-            </section>
 
-            <section id="realizacje">
-                <div class="mini_container">
-                    <aside><img src="photos/DSC_0673.JPG"></aside>
-                    <article>
-                        <h2 class="section__title">REALIZACJE</h2>
-                        <p>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Excepturi exercitationem nobis quos rem illum explicabo aperiam perspiciatis odit aut? Quaerat nobis sequi minima cupiditate ex soluta quisquam eligendi eveniet saepe dolorem, tempora laudantium necessitatibus sapiente, fugiat nihil. Quod officia vel porro earum ad delectus, 
-                            harum eveniet ducimus doloremque eum quas.<br><br>adipisicing elit. Cupiditate deseru
-                            nt magni sint mollitia similique corporis quis voluptatibus, eos tempora ealias
-                            illo nemo excepturi blanditiis vitae impedit minus tempore praesentium harum.Quis, temporibus dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime minima quod eius aspernatur. Accusantium sed sunt corrupti sapiente deleniti?<br><hr>
-                        <a href="realizacje.html">Zobacz realizacje</a>
-                    </article>
+                <img src="images/Testimonial2.png" alt="" />
+              </div>
+            </div>
+
+            <div class="testimonial">
+              <div class="slide-container">
+                <div class="content">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+                    malesuada pharetra ut feugiat quisque odio nulla leo.
+                    Facilisis rhoncus gravida integer risus, ac vulputate a.
+                    Elementum fermentum feugiat nunc cras ac orci, amet sapien.
+                  </p>
+                  <div class="name"><strong>Tara Green,</strong> Ferrari</div>
                 </div>
-            </section>
 
-            <section id="about">
-                <h2 class="section__title">OPINIE</h2>
-                <div class="mini_container">
-                    <article>
-                        <p>Lorem ipsum dolor sit amet consectetur, Lorem ipsum dolor sit amet consectetur 
-                            adipisicing elit. Excepturi exercitationem nobis quos rem illum explicabo aperiam perspiciatis odit aut? Quaerat nobis sequi minima cupiditate ex soluta quisquam eligendi eveniet saepe dolorem, tempora laudantium necessitatibus sapiente, fugiat nihil. Quod officia vel porro earum ad delectus, 
-                            harum eveniet ducimus doloremque eum quas.<br><br>adipisicing elit. Cupiditate deseru
-                            nt magni sint mollitia similique corporis quis voluptatibus, eos tempora ealias
-                            illo nemo excepturi blanditiis vitae impedit minus tempore praesentium harum.Quis, temporibus dolorum? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit maxime minima quod eius aspernatur. Accusantium sed sunt corrupti sapiente deleniti?<br><hr>
-                        <a href="about.html">Czytaj wiecej...</a>
-                    </article>
-                    <aside><img src="photos/DSC_0683.JPG"></aside>
-                </div>
-            </section>
-            
+                <img src="images/Testimonial3.png" alt="" />
+              </div>
+            </div>
+          </div>
 
-            <section class="contact_container" id = "contact">
-                Tutaj bedzie kiedys formularz kontaktowy :*
-            </section>
-        </main>
-    </body>
+          <span class="slider-prev"
+            ><img src="images/LeftArrow.svg" alt=""
+          /></span>
+
+          <span class="slider-next"
+            ><img src="images/RightArrow.svg" alt=""
+          /></span>
+
+          <div role="tablist" class="dots-container">
+            <div class="dots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- End of Testimonials Section -->
+
+    <div class="wrapper">
+      <section id="contact" class="contact-section">
+        <h2>Contact Us</h2>
+        <form action="#">
+          <div class="group">
+            <input type="text" placeholder="Name" />
+            <input type="text" placeholder="Email" />
+          </div>
+
+          <div class="group">
+            <textarea
+              name=""
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Your Message"
+            ></textarea>
+          </div>
+
+          <a href="#" class="btn cyan">Send Message</a>
+        </form>
+      </section>
+    </div>
+
+    <!-- End of Contact Section -->
+
+    <footer>
+      <div class="wrapper">
+        <div class="footer-container">
+          <div class="logo">
+            <img src="images/Logo-Light.svg" alt="" />
+          </div>
+
+          <div class="footer-nav">
+            <h3>Our Services</h3>
+            <ul>
+              <li><a href="#">Mobile Development</a></li>
+              <li><a href="#">Web App Development</a></li>
+              <li><a href="#">Theme Development</a></li>
+              <li><a href="#">SEO</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <h3>About Us</h3>
+            <ul>
+              <li><a href="#">GT Web Design</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-nav">
+            <h3>Get Social</h3>
+
+            <div class="footer-social">
+              <a href="#">
+                <img src="images/FacebookLogo.png" alt="" />
+              </a>
+
+              <a href="#">
+                <img src="images/InstagramLogo.png" alt="" />
+              </a>
+
+              <a href="#">
+                <img src="images/TwitterLogo.png" alt="" />
+              </a>
+            </div>
+
+            <p>info@gtcoding.net</p>
+          </div>
+        </div>
+      </div>
+
+      <p class="copyright">
+        This website was designed by Godson T. &copy; 2020
+      </p>
+    </footer>
+
+    <!-- End of the Footer -->
+
+    <script src="glider.min.js"></script>
+
+    <script>
+      new Glider(document.querySelector(".testimonials"), {
+        slidesToShow: 1,
+        dots: ".dots",
+        arrows: {
+          prev: ".slider-prev",
+          next: ".slider-next",
+        },
+      });
+    </script>
+
+    <script src="main.js"></script>
+  </body>
 </html>
-
