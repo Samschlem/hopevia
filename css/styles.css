@@ -10883,7 +10883,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: linear-gradient(to top, #f5f5f7, rgba(255, 255, 255, 0) 10%), url("../assets/img/header-bg.png");
+  background-image: linear-gradient(to top, #f5f5f7, rgba(255, 255, 255, 0) 10%), url("../assets/img/header-bg.webp");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
