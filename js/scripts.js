@@ -6,6 +6,56 @@
 //
 // Scripts
 // 
+document.addEventListener('DOMContentLoaded', function () {
+    var navbarToggler = document.querySelector('.navbar-toggler');
+    var navbarResponsive = document.querySelector('#navbarResponsive');
+
+    navbarToggler.addEventListener('click', function () {
+        if (navbarResponsive.classList.contains('collapsing')) return;
+
+        if (navbarResponsive.classList.contains('show')) {
+            collapse(navbarResponsive);
+        } else {
+            expand(navbarResponsive);
+        }
+    });
+
+    function collapse(element) {
+        element.style.height = element.scrollHeight + 'px';
+        element.classList.add('collapsing');
+        element.classList.remove('collapse', 'show');
+
+        requestAnimationFrame(function () {
+            element.style.height = '0';
+        });
+
+        element.addEventListener('transitionend', function () {
+            element.classList.remove('collapsing');
+            element.classList.add('collapse');
+            element.style.height = '';
+        }, { once: true });
+
+        navbarToggler.setAttribute('aria-expanded', 'false');
+    }
+
+    function expand(element) {
+        element.classList.remove('collapse');
+        element.classList.add('collapsing');
+        element.style.height = '0';
+
+        requestAnimationFrame(function () {
+            element.style.height = element.scrollHeight + 'px';
+        });
+
+        element.addEventListener('transitionend', function () {
+            element.classList.remove('collapsing');
+            element.classList.add('collapse', 'show');
+            element.style.height = '';
+        }, { once: true });
+
+        navbarToggler.setAttribute('aria-expanded', 'true');
+    }
+});
 
 window.addEventListener('DOMContentLoaded', event => {
 
