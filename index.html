@@ -42,20 +42,21 @@
   src: url('https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700');
   font-display: swap;
 }
-.collapse {
-            height: 0;
-            overflow: hidden;
-            transition: height 0.35s ease;
-        }
-        .collapsing {
-            height: 0;
-            overflow: hidden;
-            transition: height 0.35s ease;
-        }
-        .collapse.show {
-            height: auto;
-        }
+
           </style>
+              <style>
+                .collapse:not(.show) {
+                    display: none;
+                }
+                .collapsing {
+                    height: 0;
+                    overflow: hidden;
+                    transition: height 0.35s ease;
+                }
+                .navbar-collapse.show {
+                    display: block !important;
+                }
+            </style>
     </head>
 
     <body id="page-top">
@@ -230,7 +231,7 @@
                     <div class="col-md-8">
                         <div class="text-center text-md-left">
                             <h2 class="section-heading text-uppercase" style="transform: translateY(-20px)">Make Your Car Look Brand New!</h2>
-                            <p class="large text-muted" style= "font: Montserrat;">We don't treat your vehicle as just another job, but as if it was our own. We take great pride in our careful approach to car detailing making sure to pay close attention to every part of your vehicle, so nothing gets overlooked. From the exterior paint to the interior upholstery, we give each component the care it needs to look its best. Our mobile 
+                            <p class="large text-muted">We don't treat your vehicle as just another job, but as if it was our own. We take great pride in our careful approach to car detailing making sure to pay close attention to every part of your vehicle, so nothing gets overlooked. From the exterior paint to the interior upholstery, we give each component the care it needs to look its best. Our mobile 
                                 car detailing <a class = "btn2" href="/service-area">service area</a> covers the entire DFW specifically <a class = "btn2" href="/frisco">Frisco Tx</a>.</p>
                             <br><a class="btn btn-primary btn-xl text-uppercase" style = "border-radius: 20px;" href="tel:+14696005988">Call now for quote<br> 469-600-5988</a>
                         </div>
@@ -602,6 +603,7 @@
 <!-- Include Bootstrap CSS and JS -->
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" defer></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" defer></script>
 
 <style>
