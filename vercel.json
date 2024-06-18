@@ -43,6 +43,15 @@
       {
         "source": "/fortworth",
         "destination": "/fortworth.html"
+      },
+      {
+        "source": "/frisco-getting-expensive",
+        "destination": "/frisco-getting-expensive.html"
+      }
+      ,
+      {
+        "source": "/blog",
+        "destination": "/blog.html"
       }
     ]
   }
