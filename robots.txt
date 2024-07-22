@@ -33,4 +33,4 @@ Disallow:
 User-agent: *
 Disallow: 
 Disallow: /cgi-bin/
-Sitemap: https://www.friscocardetailing.com/sitemap.xml
+Sitemap: https://www.hopevia.com/sitemap.xml
