@@ -165,7 +165,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                     <li class="nav-item"><a class="nav-link" href="#packages">Pricing</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quiz-section">Start Your Journey</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#" onclick="showCoachInfo()">Start Your Journey</a></li>
                 </ul>
             </div>
         </div>
@@ -374,6 +374,10 @@
         }
         
     </style>
+    <!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/sam-2rs9/coaching-session" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
 <section class="page-section bg-light" id="testimonials" style="background-color: whitesmoke !important; padding-bottom: 0px;">
     <div class="container">
         <div class="text-center">
@@ -489,7 +493,7 @@
                 <div class="team-member">
                     <p class="text" style="font-size: 30px; margin-bottom: 0px;">1-Hour Session</p>
                     <p class="text" style="color: rgb(209, 5, 5); font-size: 25px;">(Most Popular)</p>
-                    <h4 style="margin-top: 0px; margin-bottom:20px;">$40/session</h4>
+                    <h4 style="margin-top: 0px; margin-bottom:20px;">$45/session</h4>
                     <div class="text-muted" style="margin-left:50px; margin-right:50px; margin-bottom: 20px">
                         ✓ Comprehensive Check-In
                         <br>
@@ -751,23 +755,129 @@
     showQuestion(currentQuestionIndex);
 </script>
 <script>
-        function showCoachInfo() {
-        // Show the loading message
-        const container = document.querySelector('#page-top');
+function showCoachInfo() {
+    // Show the loading message
+    const container = document.querySelector('#page-top');
+    container.innerHTML = `
+        <div style="text-align: center; padding: 100px;">
+            <h2>Finding the next available coach for you...</h2>
+            <p>Please wait a moment.</p>
+        </div>`;
+
+    // Replace the content with the booking information after a short delay
+    setTimeout(() => {
         container.innerHTML = `
-            <div style="text-align: center; padding: 100px;">
-                <h2>Finding the next available coach for you...</h2>
-                <p>Please wait a moment.</p>
+            <div class="container mt-5 text-center">
+                <img src="assets/img/team/wylie-schlemmer.jpg" alt="Wylie Schlemmer" class="img-fluid rounded-circle mb-4" style="max-width: 200px;">
+                <h1>Hi! I'm Wylie Schlemmer, your future life coach.</h1>
+                <p>I'm an avid mountain biker, skier, and Ironman competitor. As a devout Christian, my faith guides me. I hold a Master's in Psychology from USC and am pursuing my PhD. Let's achieve balance and fulfillment together!</p>
+
+                <!-- Larger "Book Now" Heading -->
+                <h2 class="mt-5" style="font-size: 2.5rem; font-weight: bold;">Book Now</h2>
+                <div class="d-flex justify-content-center mt-4">
+                    <a href="https://calendly.com/sam-2rs9/coaching-session?month=2024-11" target="_blank" class="btn btn-primary btn-lg mx-2">30 Minute Session - $25</a>
+                    <a href="https://calendly.com/sam-2rs9/coaching-session-clone?month=2024-11" target="_blank" class="btn btn-primary btn-lg mx-2">60 Minute Session - $45</a>
+                    <a href="https://calendly.com/sam-2rs9/coaching-session-clone-clone" target="_blank" class="btn btn-primary btn-lg mx-2">120 Minute Session - $90</a>
+                </div>
+
+                <h2 class="mt-5">Reviews (3)</h2>
+                
+                <!-- Review 1 -->
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h5 class="card-title">- Michael S. -</h5>
+                        <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                        <p class="card-text">"Do not discount the value of having a CHRISTIAN MENTOR. I was a little hesitant at first because I've never done something like this but it has completely given me a new perspective that has seriously changed my life for the better."</p>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h5 class="card-title">- Sam S. -</h5>
+                        <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                        <p class="card-text">"Changed my life, I was confused on what I was doing wrong, but now I feel like I have the clarity to move forward with confidence."</p>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="card my-3">
+                    <div class="card-body">
+                        <h5 class="card-title">- Rachel S. -</h5>
+                        <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                        <p class="card-text">"Sometimes it's nice to just have someone to talk to and I think that was what I really needed for my self care and peace of mind."</p>
+                    </div>
+                </div>
             </div>`;
-        
-        // Redirect to the booking page after a short delay
-        setTimeout(() => {
-            window.location.href = 'https://calendly.com/sam-2rs9';
-        }, 1000); // You can adjust the delay (in milliseconds) as needed
-    }
+    }, 1000); // You can adjust the delay (in milliseconds) as needed
+}
+
  </script>
  
- 
+ <div class="modal fade" id="coachInfoModal" tabindex="-1" role="dialog" aria-labelledby="coachInfoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="coachInfoModalLabel">Book Your Session with Wylie</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h2 class="text-center">Hi! I'm Wylie, your future life coach.</h2>
+                <p class="text-center">I'm an avid mountain biker, skier, and Ironman competitor. As a devout Christian, my faith guides me. I hold a Master's in Psychology from USC and am pursuing my PhD. Let's achieve balance and fulfillment together!</p>
+
+                <!-- Reviews Carousel -->
+                <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+                    <div class="carousel-inner">
+                        <!-- First set of testimonials -->
+                        <div class="carousel-item active">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">- Michael S. -</h5>
+                                    <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                                    <p class="card-text">"Do not discount the value of having a CHRISTIAN MENTOR. I was a little hesitant at first because I've never done something like this but it has completely given me a new perspective that has seriously changed my life for the better."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second set of testimonials -->
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">- Sam S. -</h5>
+                                    <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                                    <p class="card-text">"Changed my life, I was confused on what I was doing wrong, but now I feel like I have the clarity to move forward with confidence."</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Third set of testimonials -->
+                        <div class="carousel-item">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">- Rachel S. -</h5>
+                                    <p class="text-muted"><small>⭐⭐⭐⭐⭐</small></p>
+                                    <p class="card-text">"Sometimes it's nice to just have someone to talk to and I think that was what I really needed for my self care and peace of mind."</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Carousel Controls -->
+                    <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
  
  
   
